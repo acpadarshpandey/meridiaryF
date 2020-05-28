@@ -1,0 +1,18 @@
+.mydiv{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+}
+.div{
+    display: flex;
+    justify-content: left;
+    float:left;  
+}
+.show{
+    display: flex;
+ 
+        float:right;  
+        width:25%; 
+        height:280px; 
+}
