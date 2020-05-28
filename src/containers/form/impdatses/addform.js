@@ -36,23 +36,23 @@ export default class CreateNotes extends Component {
     onSubmit(e) {
         e.preventDefault();
         
-        console.log(`Form submitted:`);
-        console.log(`Data: ${this.state.data}`);
-        console.log(`date: ${this.state.date}`);
+        // console.log(`Form submitted:`);
+        // console.log(`Data: ${this.state.data}`);
+        // console.log(`date: ${this.state.date}`);
     
 
-    const newnotes = {
+    const payload = {
        data: this.state.data,
          date: this.state.date,
     
     };
 
-    axios.post('https://meridiaryb.herokuapp.com/addNotes', newnotes)
+    axios.post('https://meridiaryb.herokuapp.com/addNotes', payload)
         .then(res => { 
             console.log(res.data) 
             this.setState({
-               data: res.data.data,
-            date: res.data.date,
+               data: '',
+            date:'',
               
             })});
    
@@ -75,7 +75,7 @@ export default class CreateNotes extends Component {
                             />
                 </div>
                 <div className="form-group">
-                    <label> date </label>
+                    <label> Date </label>
                     <input 
                             type="date" 
                             className="form-control"
