@@ -26,6 +26,7 @@ import '../containers/login.css';
      
 
      onchange=(e)=> {
+       console.log(e)
        this.setState({
          [e.target.name]:e.target.value
        })

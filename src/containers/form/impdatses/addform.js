@@ -47,7 +47,7 @@ export default class CreateNotes extends Component {
     
     };
 
-    axios.post('https://meridiaryb.herokuapp.com/imdates/addnotes', payload)
+    axios.post('https://meridiaryb.herokuapp.com/impdates/addnotes', payload)
         .then(res => { 
             console.log(res.data) 
             this.setState({
