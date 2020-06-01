@@ -40,7 +40,7 @@ class ReactEditor extends Component {
       
       };
   
-      axios.post('http://localhost:8080/editor/addContent', payload)
+      axios.post('https://meridiary.herokuapp.com/editor/addContent', payload)
           .then(res =>{ console.log(res.data)
           
       this.setState({
