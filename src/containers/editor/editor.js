@@ -46,7 +46,7 @@ class ReactEditor extends Component {
       
       };
   
-      axios.post('https://meridiary.herokuapp.com/editor/addContent', payload)
+      axios.post('https://meridiaryb.herokuapp.com/editor/addContent', payload)
           .then(res =>{console.log(res.data)     
               this.setState({
               content: '',
@@ -71,7 +71,10 @@ class ReactEditor extends Component {
            <div className="show">
 		   <div className="container"> 
              <EditorList/>
-             <div dangerouslySetInnerHTML={this.createMarkup()} className='editor'></div>
+             <div>  <div style={{maxWidth:"50vw", maxHeight:"10vh" }}>
+               <div dangerouslySetInnerHTML={this.createMarkup()} className='mydiv'>
+                 </div> </div>  </div>
+             
            </div>
             </div>
             </div>
