@@ -5,6 +5,10 @@ import ReactQuill from 'react-quill'; // ES6
 import 'react-quill/dist/quill.snow.css'; 
 import {Button} from 'react-bootstrap';
 import axios from 'axios'
+import EditorList from './display'
+import '../form/impdatses/date.css'
+import '..//Notesapp/ntp.css';
+import '../form/impdatses/date.css'
 
 class ReactEditor extends Component {
        constructor(props) {
@@ -19,7 +23,9 @@ class ReactEditor extends Component {
     
         }
     }
-               
+    createMarkup = () => {
+      return { __html: this.state.content };
+    }       
       
       handleChange(value){
         this.setState({
@@ -41,10 +47,9 @@ class ReactEditor extends Component {
       };
   
       axios.post('https://meridiary.herokuapp.com/editor/addContent', payload)
-          .then(res =>{ console.log(res.data)
-          
-      this.setState({
-        content: '',
+          .then(res =>{console.log(res.data)     
+              this.setState({
+              content: '',
        
      })});
       
@@ -52,15 +57,25 @@ class ReactEditor extends Component {
       
     
   render() {
-    return ( <div style={{maxWidth:"50vw", maxHeight:"10vh"}}>      
-     <ReactQuill value={this.state.content}
-                  onChange={this.handleChange} />
-
-       <Button onClick={this.onSubmit}  variant="secondary" size="lg" block>
-    Add
-  </Button>
-        
-        </div>
+    return ( 
+        <div><div style={{maxWidth:"50vw", maxHeight:"10vh"}}>      
+        <ReactQuill value={this.state.content}
+                     onChange={this.handleChange} />
+   
+          <Button onClick={this.onSubmit}  variant="secondary" size="lg" block>
+       Add
+     </Button>
+           
+           </div>
+         
+           <div className="show">
+		   <div className="container"> 
+             <EditorList/>
+             <div dangerouslySetInnerHTML={this.createMarkup()} className='editor'></div>
+           </div>
+            </div>
+            </div>
+           
     );
   }
 } 
