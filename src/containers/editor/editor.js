@@ -72,7 +72,7 @@ class ReactEditor extends Component {
 		   <div className="container"> 
              <EditorList/>
              <div>  <div style={{maxWidth:"50vw", maxHeight:"10vh" }}>
-               <div dangerouslySetInnerHTML={this.createMarkup()} className='mydiv'>
+               <div dangerouslySetInnerHTML={this.createMarkup()} className='editor'>
                  </div> </div>  </div>
              
            </div>
