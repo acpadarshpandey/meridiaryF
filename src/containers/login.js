@@ -5,7 +5,6 @@ import {Button,} from '@material-ui/core';
 import{Form,} from 'react-bootstrap'
 import  { BrowserRouter as Router,Route,Switch } from 'react-router-dom';
 //import HomePage from './Home/home';
-import SignUP  from './signup'
 import '../component/first.css';
 import '../containers/login.css';
 import {connect}  from 'react-redux'
@@ -62,16 +61,16 @@ this.props.login(user);
                             Submit
                         </Button>
                         
-                        <Form.Text className="text-muted">
+                        {/* <Form.Text className="text-muted">
                         <Link to="/SignUP"> IF NOT USER THEN SIGNUP</Link>
-                               </Form.Text>
+                               </Form.Text> */}
                           </Form>
                    
                  </div>
                
-               <Switch>
+               {/* <Switch>
                 <Route path="/SignUp"  exact component={SignUP,refresh}/>
-               </Switch>
+               </Switch> */}
                      </div>
                 </Router>
                  

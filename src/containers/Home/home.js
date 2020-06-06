@@ -6,11 +6,12 @@ import Editor from '../editor/editor';
 import '../Home/home.css'
 import {AppBar,Toolbar,Typography,Button,} from '@material-ui/core';
 import ImpDates from '../Notesapp/importantdate'
-import  signup from '../signup'
 import Logout from '../logout'
 import login from '../login'
+import SignUP  from '../signup'
 import {connect} from 'react-redux';
 import PropsTypes from 'prop-types'
+
 
 class Home extends React.PureComponent{
 
@@ -35,6 +36,9 @@ render() {
   
      <Button color="inherit">  < Link to="/login">
       <Button variant="contained" color="primary">Login</Button>
+      </Link></Button>
+      <Button color="inherit">  < Link to="/signup">
+      <Button variant="contained" color="primary">SignUp</Button>
       </Link></Button>
         </Fragment>
 
@@ -70,7 +74,7 @@ render() {
          <Route path="/login" exact component={login}/>
          <Route path="/editor" exact component={Editor}/>
          <Route path="/impd" exact component={ImpDates}/>
-         <Route path ="/signup" exact component={signup}/>
+         <Route path="/signup"  exact component={SignUP}/>
   
           
          </Switch>

@@ -9,6 +9,7 @@ import EditorList from './display'
 import '../form/impdatses/date.css'
 import '..//Notesapp/ntp.css';
 import '../form/impdatses/date.css'
+import renderList from './render'
 
 class ReactEditor extends Component {
        constructor(props) {
@@ -64,9 +65,16 @@ class ReactEditor extends Component {
    
           <Button onClick={this.onSubmit}  variant="secondary" size="lg" block>
        Add
-     </Button>
+     </Button> 
+     
            
            </div>
+           <div>
+           <renderList/>
+           </div>
+           
+      
+     
          
            <div className="show">
 		   <div className="container"> 
