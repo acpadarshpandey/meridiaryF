@@ -1,13 +1,15 @@
 import axios from 'axios';
+import{returnError} from './error.action'
 import {USER_LOAD, USER_LOADING, AUTH_ERROR, LOGIN_SUCCESS, LOGIN_FAIL, REGISTER_SUCCESS, LOGOUT_SUCCESS, REGISTER_FAIL} from './types'
 
 //register
 
 export const register= ({name, email, password})=> dispatch =>{
+    console.log(name,email,password)
     //header
     const config={
         headers:{
-            'Content-Type': 'application.json'
+            'Content-Type': 'application/json'
         }
     }
     // req body
@@ -29,23 +31,32 @@ export const logout=()=>{
 
 }
 export const login= ({email, password})=> dispatch =>{
+    console.log(email,password)
     //header
     const config={
         headers:{
-            'Content-Type': 'application.json'
+            'Content-Type': 'application/json',
+             Accept :  "application/json"
         }
     }
     // req body
-       const body=JSON.stringify({ email, password,});
+       const body=JSON.stringify({ email, password});
 
        axios.post('https://meridiaryb.herokuapp.com/api/signin',body,config)
-       .then(res=>dispatch({
-           type:LOGIN_SUCCESS,
-           payload:res.data
-       }))
-       .catch(err=> dispatch({
-           type:REGISTER_FAIL,
-       }))
+       .then(res=>{
+           console.log(res);
+           dispatch({
+            type:LOGIN_SUCCESS,
+            payload:res.data
+        })
+       })
+       .catch(err=> {
+        
+        console.log(err)        
+        dispatch({
+       type:LOGIN_FAIL
+   })
+       })
 }
 
 // Setup config/headers and token

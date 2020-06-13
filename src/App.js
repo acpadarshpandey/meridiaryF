@@ -4,8 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import FirstP from './component/firstP';
 import {Provider} from 'react-redux';
 import store from './store';
-
-
+ 
 
 function App() {
   return (
@@ -14,7 +13,9 @@ function App() {
     className="UI Container">
       <div>
         
-      <FirstP/>
+     
+     <FirstP/>
+      
          </div>
       </div>
         </Provider></div>
