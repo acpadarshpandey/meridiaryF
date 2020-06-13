@@ -5,7 +5,7 @@ import {USER_LOAD, USER_LOADING, AUTH_ERROR, LOGIN_SUCCESS, LOGIN_FAIL, REGISTER
 //register
 
 export const register= ({name, email, password})=> dispatch =>{
-    console.log(name,email,password)
+  
     //header
     const config={
         headers:{
@@ -31,7 +31,6 @@ export const logout=()=>{
 
 }
 export const login= ({email, password})=> dispatch =>{
-    console.log(email,password)
     //header
     const config={
         headers:{
@@ -43,16 +42,13 @@ export const login= ({email, password})=> dispatch =>{
        const body=JSON.stringify({ email, password});
 
        axios.post('https://meridiaryb.herokuapp.com/api/signin',body,config)
-       .then(res=>{
-           console.log(res);
+       .then(res=>
            dispatch({
             type:LOGIN_SUCCESS,
             payload:res.data
         })
-       })
-       .catch(err=> {
-        
-        console.log(err)        
+       )
+       .catch(err=> {     
         dispatch({
        type:LOGIN_FAIL
    })

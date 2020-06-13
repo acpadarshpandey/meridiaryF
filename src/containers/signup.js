@@ -26,18 +26,22 @@ class SignUP extends React.Component {
 
 
   onchange = (e) => {
-    console.log(e)
     this.setState({
       [e.target.name]: e.target.value
-    }, () => console.log(this.state))
+    })
   };
   clickhandler = e => {
+    
     e.preventDefault();
     const { name, email, password } = this.state;
+    
+    
     const newuser = {
       name, email, password
     };
     this.props.register(newuser);
+    this.props.history.push("/login");
+    
   }
 
 
@@ -65,6 +69,7 @@ class SignUP extends React.Component {
               <Button variant="primary" onClick={this.clickhandler}>
                 Submit
                         </Button>
+                        
             </Form>
           </div>  </div>
 

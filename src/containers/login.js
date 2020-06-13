@@ -25,7 +25,7 @@ class LoginPage extends React.Component {
   onchange = (e) => {
     this.setState({
       [e.target.name]: e.target.value
-    }, () => console.log(this.state));
+    })
   };
   clickHandler = e => {
     e.preventDefault();
