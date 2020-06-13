@@ -18,7 +18,6 @@ export default class EditorList extends Component {
     componentDidMount() {
         axios.get('https://meridiaryb.herokuapp.com/editor/showContent')
             .then(response => {
-                console.log(response)
                 this.setState({ Lists: response.data.List });
             })
 
