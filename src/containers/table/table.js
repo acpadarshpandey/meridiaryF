@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import '../form/impdatses/date.css'
-import Refresh from '../refresh'
 const Notes = props => (
   <tr>
       <td>{props.note.data}</td>
@@ -41,12 +40,12 @@ export default class List extends Component {
     render() {
         return (
           
-            <div>
+            <div style={{maxWidth:"50vw", maxHeight:"100vh","color":"pink",margin:"5px", alignContent:"center",overflow: "scroll",background:"transparent"}}>
                  <h3>Notes List</h3>
-                 <Refresh/>
+
                  <div className="mydiv">
                
-                <table className="table table-striped" style={{ marginTop: 20 }} >
+                <table className="table table-striped" style={{ marginTop: 20 ,color:"pink"}} >
                     <thead>
                         <tr>
                             <th>Notes</th>

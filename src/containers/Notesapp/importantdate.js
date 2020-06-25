@@ -11,11 +11,11 @@ class Apps extends React.Component {
 		<div className="div">
 			<div className="container">
 
-               <h1>Important Dates to Remember</h1>
+               <h1 style={{"color":"pink",margin:"5px", alignContent:"center"}}>Important Dates to Remember</h1>
           <div className="flex-row">
 	<div className="flex-large">
-			<Fragment>
-				<h2>Add Notes</h2>
+			<Fragment >
+				<h2 style={{"color":"pink",margin:"5px", alignContent:"center"}}>Add Notes</h2>
 				<NotesForm  />
 			</Fragment>
 			</div>
@@ -24,9 +24,9 @@ class Apps extends React.Component {
 		   </div> 
 		   <div className="show">
 		   <div className="container"> 
-		<h2>View Notes</h2>
+		<h2 style={{"color":"pink",margin:"5px", alignContent:"center"}}>View Notes</h2>
 		<DataTable />
-	</div>
+	</div> 
 </div>
 </div>
 		

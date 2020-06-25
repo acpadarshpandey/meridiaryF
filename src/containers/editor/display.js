@@ -25,6 +25,7 @@ export default class EditorList extends Component {
                 console.log(error);
             })
     }
+    
 
 
     render(data) {
@@ -32,7 +33,8 @@ export default class EditorList extends Component {
 
 
             <div>
-                <h3>My Thoghts</h3>
+                <h3 style={{color:"yellow"}}>My Thoughts</h3>
+        <div> </div>
 
                 {/* <div className="mydiv">
                

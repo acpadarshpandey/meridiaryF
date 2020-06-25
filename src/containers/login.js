@@ -44,19 +44,19 @@ class LoginPage extends React.Component {
       <Router> <div style={{ maxWidth: "50vw", maxHeight: "10vh" }}>
         <div className="mydiv">
 
-          <Form>
+          <Form style={{"color":"black",margin:"5px", alignContent:"center"}}>
             <Form.Group controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label  ><h5>Email address</h5></Form.Label>
               <Form.Control onChange={this.onchange} name="email" type="email" placeholder="Enter email" />
             </Form.Group>
 
             <Form.Group controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
+              <Form.Label><h5>Password</h5></Form.Label>
               <Form.Control onChange={this.onchange} name="password" type="password" placeholder="Password" />
             </Form.Group>
             <Form.Group controlId="formBasicCheckbox">
             </Form.Group>
-            <Button variant="primary" onClick={this.clickHandler}>
+            <Button variant="contained"  onClick={this.clickHandler}>
               Submit
                         </Button>
 

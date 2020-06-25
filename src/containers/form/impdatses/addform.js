@@ -65,7 +65,7 @@ export default class CreateNotes extends Component {
         return (<div className="mydiv">
             
             <div style={{marginTop: 10}}>
-            <form onSubmit={this.onSubmit}>
+            <form style={{"color":"pink",margin:"5px", alignContent:"center"}} onSubmit={this.onSubmit}>
                 <div className="form-group"> 
                     <label>Notes </label>
                     <input  type="text"
