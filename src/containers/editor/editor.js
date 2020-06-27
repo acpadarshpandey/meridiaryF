@@ -4,10 +4,14 @@ import 'react-quill/dist/quill.snow.css';
 import {Button} from 'react-bootstrap';
 import axios from 'axios'
 import EditorList from './display'
+
 import '../form/impdatses/date.css'
 import '..//Notesapp/ntp.css';
 import '../form/impdatses/date.css'
-import showResult from "./showResult"
+import showResult from "./showResult";
+import { BrowserRouter as Router,Redirect, Route, Switch } from 'react-router-dom';
+  import {Link} from 'react-router-dom'
+
 class ReactEditor extends Component {
        constructor(props) {
         super(props);
@@ -17,10 +21,15 @@ class ReactEditor extends Component {
 
         this.state = {
           content: '',
-    
+          show:false
     
         }
     }
+    toggleData=()=>{
+           const doesShow=this.state.show;
+           this.setState({show:!doesShow})
+      
+         }
     createMarkup = () => {
       return { __html: this.state.content };
     }       
@@ -55,9 +64,21 @@ class ReactEditor extends Component {
       
     
   render() {
-    return ( 
-        <div>
-
+    return (
+     
+        <div> 
+          <div>
+          <Button variant="light" onClick={this.toggleData}> Get Data</Button> 
+          </div>
+       
+          {this.state.show?<div>   <div>
+        <Router>
+        <Button variant="light" onClick={this.toggleData}> <Link to= "/data"> <Button variant="light"> Go Back!!</Button> </Link> </Button>
+          <Switch>
+          <Route path="/data" exact component={showResult}/>
+          </Switch>
+          </Router>
+          </div></div> :<div>
           <div style={{maxWidth:"50vw", maxHeight:"10vh", color:"white"}}>  
           <h4 style={{color:"yellow"}}>Type Here!!!</h4>    
         <ReactQuill theme="snow" style={{margin: "10px"}} value={this.state.content}
@@ -72,13 +93,16 @@ class ReactEditor extends Component {
            <div className="show">
 		   <div className="container"> 
              <EditorList/>
+             
+          
              <div>  <div style={{maxWidth:"50vw", maxHeight:"50vh","border": "1px solid black" ,color:"pink"}}>
                <div dangerouslySetInnerHTML={this.createMarkup()} className='editor'>
                  </div> </div>  </div>
              
            </div>
             </div>
-            <div><showResult/></div>
+            </div>}
+           
             </div>
            
     );

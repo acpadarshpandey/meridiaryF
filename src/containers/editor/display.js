@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 //import { Link } from 'react-router-dom';
 import '../form/impdatses/date.css'
+import showResult from './showResult'
 
 
 
@@ -33,9 +34,10 @@ export default class EditorList extends Component {
 
 
             <div>
+                
                 <h3 style={{color:"yellow"}}>My Thoughts</h3>
-        <div> </div>
-
+       
+        
                 {/* <div className="mydiv">
                
                  <Card style={{ width: '18rem' }}>

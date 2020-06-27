@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import { logout } from '../actions/auth.action';
 import {Button,} from '@material-ui/core';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 export class Logout extends Component{
     static  propTypes={
         logout: PropTypes.func.isRequired

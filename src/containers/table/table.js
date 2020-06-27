@@ -7,7 +7,7 @@ const Notes = props => (
       <td>{props.note.data}</td>
       <td>{props.note.date}</td>
       <td>
-          <Link to={"/delete/"+props.note._id}>Delete</Link>
+          <Link to={"/deleteNotes/:id"+props.note._id}>Delete</Link>
       </td>
   </tr>
 )

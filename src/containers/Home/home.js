@@ -12,6 +12,7 @@ import SignUP from '../signup'
 import { connect } from 'react-redux';
 import PropsTypes from 'prop-types'
 import AboutUS from '../../containers/about'
+// import showResult from '../../containers/editor/showResult'
 
 
 class Home extends React.PureComponent {
@@ -58,6 +59,7 @@ class Home extends React.PureComponent {
       <Button color="inherit">  < Link to="/signup">
         <Button variant="contained" >SignUp</Button>
       </Link></Button>
+      <Redirect to="/" />
     
 
      
@@ -71,7 +73,7 @@ class Home extends React.PureComponent {
         <AppBar  color="yellow"   position="static">
           <Toolbar >
             <Typography style={{fontfamily:"arial"}} variant="h3">
-              MeriDiary
+              MeriDiary 
             
             </Typography>
             <div  style={{display:"flex",float:"right",margin:"0px 10px"}}>
@@ -81,6 +83,9 @@ class Home extends React.PureComponent {
               <Button color="inherit"> <Link to="/">
               <Button variant="contained" >AboutUS</Button>
               </Link></Button>
+              {/* <Button color="inherit"> <Link to="/data">
+              <Button variant="contained" >Data</Button>
+              </Link></Button> */}
               </div>
            
               {isAuthenticated ? authlink : guestLink}  
@@ -98,6 +103,7 @@ class Home extends React.PureComponent {
           <Route path="/editor" exact component={Editor} />
           <Route path="/impd" exact component={ImpDates} />
           <Route path="/signup" exact component={SignUP} />
+          {/* <Route path="/data" exact component={showResult}/> */}
 
 
         </Switch>
