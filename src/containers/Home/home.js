@@ -12,6 +12,7 @@ import SignUP from '../signup'
 import { connect } from 'react-redux';
 import PropsTypes from 'prop-types'
 import AboutUS from '../../containers/about'
+import Todo from "../../component/Todo/todo"
 // import showResult from '../../containers/editor/showResult'
 
 
@@ -40,9 +41,12 @@ class Home extends React.PureComponent {
                  </Button>
                  <Button color="inherit"> <Link to="/impd">
                    <Button variant="contained" >SpecialDate</Button>
+                 </Link></Button>
+                 <Button color="inherit"> <Link to="/todo">
+                   <Button variant="contained" >DailyGoals</Button>
                  </Link></Button></div>    
            
-                 <div style={{display:"flex",float:"right",margin:"0px 470px"}}>
+                 <div style={{display:"flex",float:"right",margin:"0px 330px"}}>
                  <Logout />
                  </div>
                 
@@ -103,6 +107,7 @@ class Home extends React.PureComponent {
           <Route path="/editor" exact component={Editor} />
           <Route path="/impd" exact component={ImpDates} />
           <Route path="/signup" exact component={SignUP} />
+          <Route path="/todo" exact component={Todo}/>
           {/* <Route path="/data" exact component={showResult}/> */}
 
 

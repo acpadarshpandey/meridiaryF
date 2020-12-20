@@ -68,7 +68,7 @@ class ReactEditor extends Component {
      
         <div> 
           <div>
-          <Button variant="light" onClick={this.toggleData}> Get Data</Button> 
+          <Button variant="light" onClick={this.toggleData}> Thoughts Save</Button> 
           </div>
        
           {this.state.show?<div>   <div>
