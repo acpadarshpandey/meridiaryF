@@ -4,7 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import FirstP from './component/firstP';
 import {Provider} from 'react-redux';
 import store from './store';
-import back from './PHOTO.jpg'
+//import back from './PHOTO.jpg'
+import back from "./h.jpg"
  
 
 function App() {

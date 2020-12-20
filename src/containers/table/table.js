@@ -40,12 +40,12 @@ export default class List extends Component {
     render() {
         return (
           
-            <div style={{maxWidth:"50vw", maxHeight:"100vh","color":"pink",margin:"5px", alignContent:"center",overflow: "scroll",background:"transparent"}}>
+            <div style={{maxWidth:"50vw", maxHeight:"100vh","color":"brown",margin:"5px", alignContent:"center",overflow: "scroll",background:"transparent"}}>
                  <h3>Notes List</h3>
 
                  <div className="mydiv">
                
-                <table className="table table-striped" style={{ marginTop: 20 ,color:"pink"}} >
+                <table className="table table-striped" style={{ marginTop: 20 ,color:"brown"}} >
                     <thead>
                         <tr>
                             <th>Notes</th>

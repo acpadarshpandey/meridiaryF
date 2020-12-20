@@ -31,7 +31,7 @@ class showResult extends React.Component {
                 this.setState({
                     Lists: response.data.List,
 
-                    isLoading: false
+                    isloading: false
                 });
 
             })
@@ -48,12 +48,12 @@ class showResult extends React.Component {
     }
 
     render() {
-        return (<div> {this.state.isLoading ? <h2>Loading....</h2> : <div style={{ maxWidth: "100vw", maxHeight: "100vh", "color": "yellow", margin: "5px", alignContent: "center", overflow: "scroll", background: "transparent" }}>
+        return (<div> {this.state.isloading ? <h2>Loading....</h2> : <div style={{ maxWidth: "100vw", maxHeight: "100vh", "color": "black", margin: "5px", alignContent: "center", overflow: "scroll", background: "transparent" }}>
             <h3>Dairy Entries</h3>
 
             <div className="mydiv">
 
-                <table className="table table-striped" style={{ marginTop: 20, color: "white" }} >
+                <table className="table table-striped" style={{ marginTop: 20, color: "brown" }} >
                     <thead>
                         <tr>
                             <th>Notes</th>

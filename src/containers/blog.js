@@ -19,7 +19,7 @@ class Blog extends React.Component{
         return(
            
             <div > 
-                <h1 style={{"color":"pink"}}> MeriDiary</h1>
+                <h1 style={{"color":"grey"}}> MeriDiary</h1>
                 <div style={center}>
                 <div style= {{"font-family":"sans-serif" ,"color":"yellow" ,margin:"5px",display:"flex",justifyContent:"centre",float:"center"}}>
                      

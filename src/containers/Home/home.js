@@ -35,11 +35,11 @@ class Home extends React.PureComponent {
          <Redirect to="/" />
         
        <div style={{display:"flex",float:"right",margin:"0px 10px"}}><Button color="inherit"> < Link to="/editor">
-                   <Button variant="contained" >Editor</Button>
+                   <Button variant="contained" >Thoughts</Button>
                  </Link>
                  </Button>
                  <Button color="inherit"> <Link to="/impd">
-                   <Button variant="contained" >importantdate</Button>
+                   <Button variant="contained" >SpecialDate</Button>
                  </Link></Button></div>    
            
                  <div style={{display:"flex",float:"right",margin:"0px 470px"}}>

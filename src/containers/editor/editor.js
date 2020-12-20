@@ -79,8 +79,8 @@ class ReactEditor extends Component {
           </Switch>
           </Router>
           </div></div> :<div>
-          <div style={{maxWidth:"50vw", maxHeight:"10vh", color:"white"}}>  
-          <h4 style={{color:"yellow"}}>Type Here!!!</h4>    
+          <div style={{maxWidth:"50vw", maxHeight:"10vh", }}>  
+          <h4 style={{color:"black"}}>Type Here!!!</h4>    
         <ReactQuill theme="snow" style={{margin: "10px"}} value={this.state.content}
                      onChange={this.handleChange} />
    
@@ -95,7 +95,7 @@ class ReactEditor extends Component {
              <EditorList/>
              
           
-             <div>  <div style={{maxWidth:"50vw", maxHeight:"50vh","border": "1px solid black" ,color:"pink"}}>
+             <div>  <div style={{maxWidth:"50vw", maxHeight:"50vh","border": "1px solid black" ,color:"brown"}}>
                <div dangerouslySetInnerHTML={this.createMarkup()} className='editor'>
                  </div> </div>  </div>
              
