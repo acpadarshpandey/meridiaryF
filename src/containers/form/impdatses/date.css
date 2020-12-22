@@ -11,8 +11,7 @@
 }
 .show{
     display: flex;
- 
-        float:right;  
-        width:25%; 
-        height:280px; 
+     float: right;
+        width:50%; 
+        height:50%
 }

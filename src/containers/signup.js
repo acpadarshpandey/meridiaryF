@@ -47,6 +47,7 @@ class SignUP extends React.Component {
 
   render() {
     return (
+      <div className="mydiv"> 
       <div style={{ maxWidth: "50vw", maxHeight: "10vh" }}>
         <div className="mydiv">
           <div >
@@ -74,7 +75,8 @@ class SignUP extends React.Component {
           </div>  </div>
 
 
-      </div>
+      </div></div>
+      
     )
   }
 }

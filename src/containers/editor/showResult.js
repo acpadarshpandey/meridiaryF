@@ -53,7 +53,7 @@ class showResult extends React.Component {
 
             <div className="mydiv">
 
-                <table className="table table-striped" style={{ marginTop: 20, color: "brown" }} >
+                <table className="table table-striped" style={{ marginTop: "20px", color: "brown" }} >
                     <thead>
                         <tr>
                             <th>Notes</th>

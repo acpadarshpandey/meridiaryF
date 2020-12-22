@@ -24,7 +24,7 @@ class Apps extends React.Component {
 		   </div> 
 		   <div className="show">
 		   <div className="container"> 
-		<h2 style={{"color":"brown",margin:"5px", alignContent:"center"}}>View Notes</h2>
+		<h2 style={{"color":"brown",marginLeft:"5rem",marginTop:"2rem", alignContent:"center"}}>View Notes</h2>
 		<DataTable />
 	</div> 
 </div>

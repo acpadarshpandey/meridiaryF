@@ -4,8 +4,6 @@ import 'react-quill/dist/quill.snow.css';
 import {Button} from 'react-bootstrap';
 import axios from 'axios'
 import EditorList from './display'
-
-import '../form/impdatses/date.css'
 import '..//Notesapp/ntp.css';
 import '../form/impdatses/date.css'
 import showResult from "./showResult";
@@ -95,7 +93,7 @@ class ReactEditor extends Component {
              <EditorList/>
              
           
-             <div>  <div style={{maxWidth:"50vw", maxHeight:"50vh","border": "1px solid black" ,color:"brown"}}>
+             <div>  <div style={{maxWidth:"80vw", maxHeight:"50vh" ,color:"brown",marginLeft:"10rem"}}>
                <div dangerouslySetInnerHTML={this.createMarkup()} className='editor'>
                  </div> </div>  </div>
              

@@ -35,7 +35,7 @@ export default class EditorList extends Component {
 
             <div>
                 
-                <h3 style={{color:"black"}}>My Thoughts</h3>
+                <h3 style={{color:"black",marginLeft:"10rem"}}>My Thoughts</h3>
        
         
                 {/* <div className="mydiv">

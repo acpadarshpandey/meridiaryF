@@ -23,7 +23,7 @@ class Blog extends React.Component{
                 <div style={center}>
                 <div style= {{"font-family":"sans-serif" ,"color":"yellow" ,margin:"5px",display:"flex",justifyContent:"centre",float:"center"}}>
                      
-                     <div style={{margin:"5x"}}><MediaCard abg={bg}
+                     <div style={{margin:"5x"}}><MediaCard abg={bg} 
                      abc={<p>The only difference between the saint and the sinner is that every saint has a past, and every sinner has a future.
                       </p>} /></div>  
                      <div style={{margin:"5px"}}> <MediaCard abg={a}

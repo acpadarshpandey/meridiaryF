@@ -11,9 +11,9 @@ export class Logout extends Component{
     render(){
         return(
             <Fragment>
-           <Button color="inherit"> <Link to="#">                                                         
-      <Button onClick= {this.props.logout} variant="contained">Logout</Button>
-      </Link></Button>
+           <Link to="#"> 
+           <button type="button" className="btn" onClick= {this.props.logout}>Logout</button>                                                        
+  </Link>
       
                       
                   

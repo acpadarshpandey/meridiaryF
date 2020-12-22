@@ -1,6 +1,6 @@
 import React from 'react';
 //import axios from 'axios';
-// import { Link } from 'react-router-dom';
+ import { Link } from 'react-router-dom';
 import { Button, } from '@material-ui/core';
 import { Form, } from 'react-bootstrap'
 import { BrowserRouter as Router} from 'react-router-dom';
@@ -41,7 +41,8 @@ class LoginPage extends React.Component {
 
   render() {
     return (
-      <Router> <div style={{ maxWidth: "50vw", maxHeight: "10vh" }}>
+      <div className="mydiv"> 
+       <div style={{ maxWidth: "50vw", maxHeight: "10vh" }}>
         <div className="mydiv">
 
           <Form style={{"color":"black",margin:"5px", alignContent:"center"}}>
@@ -59,7 +60,11 @@ class LoginPage extends React.Component {
             <Button variant="contained"  onClick={this.clickHandler}>
               Submit
                         </Button>
-
+                        <div className="su"> 
+                        <h6>If not Register Please SignUP</h6>
+               <Link to="/signup">SignUP</Link>
+                        </div>
+               
             {/* <Form.Text className="text-muted">
                         <Link to="/SignUP"> IF NOT USER THEN SIGNUP</Link>
                                </Form.Text> */}
@@ -70,8 +75,9 @@ class LoginPage extends React.Component {
         {/* <Switch>
                 <Route path="/SignUp"  exact component={SignUP,refresh}/>
                </Switch> */}
-      </div>
-      </Router>
+      </div></div>
+      
+     
 
     )
   }

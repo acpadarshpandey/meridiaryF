@@ -13,6 +13,7 @@ import { connect } from 'react-redux';
 import PropsTypes from 'prop-types'
 import AboutUS from '../../containers/about'
 import Todo from "../../component/Todo/todo"
+
 // import showResult from '../../containers/editor/showResult'
 
 
@@ -35,18 +36,19 @@ class Home extends React.PureComponent {
          {/* <span> if(user) ? `Hey ${user.name}`:''</span> */}
          <Redirect to="/" />
         
-       <div style={{display:"flex",float:"right",margin:"0px 10px"}}><Button color="inherit"> < Link to="/editor">
-                   <Button variant="contained" >Thoughts</Button>
+       <div style={{display:"flex",float:"right",margin:"0px 10px"}}> < Link to="/editor">
+       <button type="button" className="btn">Thoughts</button>
                  </Link>
-                 </Button>
-                 <Button color="inherit"> <Link to="/impd">
-                   <Button variant="contained" >SpecialDate</Button>
-                 </Link></Button>
-                 <Button color="inherit"> <Link to="/todo">
-                   <Button variant="contained" >DailyGoals</Button>
-                 </Link></Button></div>    
+                
+                 <Link to="/impd">
+                 <button type="button" className="btn">SpecialDate</button>
+                 </Link>
+                 
+                 <Link to="/todo">
+                 <button type="button" className="btn">DailyGoals</button>
+                 </Link></div>    
            
-                 <div style={{display:"flex",float:"right",margin:"0px 330px"}}>
+                 <div style={{display:"flex",float:"right",margin:"0px 290px"}}>
                  <Logout />
                  </div>
                 
@@ -57,12 +59,9 @@ class Home extends React.PureComponent {
       
     const guestLink = (   <div style={{display:"flex",float:"right",margin:"0px 680px"}}>
       <Fragment > 
-       <Button color="inherit">  < Link to="/login">
-        <Button variant="contained" >Login</Button>
-      </Link></Button>
-      <Button color="inherit">  < Link to="/signup">
-        <Button variant="contained" >SignUp</Button>
-      </Link></Button>
+        < Link to="/login">
+       <button type="button" className="btn">Login/SignUP</button>
+      </Link>
       <Redirect to="/" />
     
 
@@ -76,28 +75,29 @@ class Home extends React.PureComponent {
         <div style={{flexGrow: 1}}>
         <AppBar  color="yellow"   position="static">
           <Toolbar >
-            <Typography style={{fontfamily:"arial"}} variant="h3">
-              MeriDiary 
+            <Typography style={{fontFamily:"cursive"}} variant="h3">
+              Meridiary 
             
             </Typography>
             <div  style={{display:"flex",float:"right",margin:"0px 10px"}}>
-            <Button color="inherit"> <Link to="/blog">
-              <Button variant="contained" >Blogs</Button>
-              </Link></Button>
-              <Button color="inherit"> <Link to="/">
-              <Button variant="contained" >AboutUS</Button>
-              </Link></Button>
+             <Link to="/blog">
+            <button type="button" className="btn">Blogs</button>
+              </Link>
+               <Link to="/">
+              <button type="button" className="btn">AboutUs</button>
+              </Link>
               {/* <Button color="inherit"> <Link to="/data">
               <Button variant="contained" >Data</Button>
               </Link></Button> */}
               </div>
            
-              {isAuthenticated ? authlink : guestLink}  
+              {isAuthenticated ?guestLink: authlink  }  
 
 
           </Toolbar>
         </AppBar>
         </div>
+       
        
         
         <Switch>

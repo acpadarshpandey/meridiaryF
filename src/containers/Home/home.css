@@ -3,4 +3,21 @@
     color: #000;
     text-align: center;
 }
-
+.img{
+    height: 130vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: 100%;
+   
+ 
+}
+.btn{
+    border-radius: 5rem;
+    margin-left: 2rem;
+}
+.show{
+    display: grid;
+   grid-template-columns: 60% 60% 60%;
+  grid-template-columns:60% 60% 60% ;
+    
+}
