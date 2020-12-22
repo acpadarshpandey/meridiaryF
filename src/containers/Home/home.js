@@ -91,7 +91,7 @@ class Home extends React.PureComponent {
               </Link></Button> */}
               </div>
            
-              {isAuthenticated ?guestLink: authlink  }  
+              {isAuthenticated ? authlink : guestLink }  
 
 
           </Toolbar>
