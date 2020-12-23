@@ -12,7 +12,7 @@ export class Logout extends Component{
         return(
             <Fragment>
            <Link to="#"> 
-           <button type="button" className="btn" onClick= {this.props.logout}>Logout</button>                                                        
+           <button type="button" className="btn" onClick= {this.props.logout}><h6>Logout </h6></button>                                                        
   </Link>
       
                       

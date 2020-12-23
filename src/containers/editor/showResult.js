@@ -7,7 +7,7 @@ const Notes = props => (
         <td>{reactp(props.note.content)}</td>
         {/* <td>{props.note.date}</td> */}
         <td>
-            <Link to={"/deleteNotes/:id" + props.note._id}>Delete</Link>
+            <Link style={{color:"brown"}} to={"/deleteNotes/:id" + props.note._id}>Delete</Link>
         </td>
     </tr>
 )
@@ -49,7 +49,7 @@ class showResult extends React.Component {
 
     render() {
         return (<div> {this.state.isloading ? <h2>Loading....</h2> : <div style={{ maxWidth: "100vw", maxHeight: "100vh", "color": "black", margin: "5px", alignContent: "center", overflow: "scroll", background: "transparent" }}>
-            <h3>Dairy Entries</h3>
+            <h3 style={{color:"#F06E10"}}>Dairy Entries</h3>
 
             <div className="mydiv">
 

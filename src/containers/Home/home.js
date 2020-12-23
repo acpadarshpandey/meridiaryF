@@ -4,7 +4,7 @@ import { BrowserRouter as Router,Redirect, Route, Switch } from 'react-router-do
 import Blog from '../blog'
 import Editor from '../editor/editor';
 import '../Home/home.css'
-import { AppBar, Toolbar, Typography, Button, } from '@material-ui/core';
+import { Toolbar, Typography, Button, } from '@material-ui/core';
 import ImpDates from '../Notesapp/importantdate'
 import Logout from '../logout'
 import login from '../login'
@@ -37,15 +37,15 @@ class Home extends React.PureComponent {
          <Redirect to="/" />
         
        <div style={{display:"flex",float:"right",margin:"0px 10px"}}> < Link to="/editor">
-       <button type="button" className="btn">Thoughts</button>
+       <button type="button" className="btn"><h6> Thoughts</h6></button>
                  </Link>
                 
                  <Link to="/impd">
-                 <button type="button" className="btn">SpecialDate</button>
+                 <button type="button" className="btn"><h6>SpecialDate </h6></button>
                  </Link>
                  
                  <Link to="/todo">
-                 <button type="button" className="btn">DailyGoals</button>
+                 <button type="button" className="btn"><h6>DailyGoals </h6></button>
                  </Link></div>    
            
                  <div style={{display:"flex",float:"right",margin:"0px 290px"}}>
@@ -60,7 +60,7 @@ class Home extends React.PureComponent {
     const guestLink = (   <div style={{display:"flex",float:"right",margin:"0px 680px"}}>
       <Fragment > 
         < Link to="/login">
-       <button type="button" className="btn">Login/SignUP</button>
+       <button type="button" className="btn"><h6> Login/SignUP</h6></button>
       </Link>
       <Redirect to="/" />
     
@@ -73,29 +73,28 @@ class Home extends React.PureComponent {
       <Router>
 
         <div style={{flexGrow: 1}}>
-        <AppBar  color="yellow"   position="static">
+        <nav style={{backgroundColor:"#F0BA34"}} color="inherit"   position="static">
           <Toolbar >
-            <Typography style={{fontFamily:"cursive"}} variant="h3">
-              Meridiary 
-            
+            <Typography style={{fontFamily:"cursive"}} variant="h3" >
+            <span> meridiary</span>
             </Typography>
             <div  style={{display:"flex",float:"right",margin:"0px 10px"}}>
              <Link to="/blog">
-            <button type="button" className="btn">Blogs</button>
+            <button type="button" className="btn"><h6> Blogs</h6></button>
               </Link>
                <Link to="/">
-              <button type="button" className="btn">AboutUs</button>
+              <button type="button" className="btn"><h6> AboutUs</h6></button>
               </Link>
               {/* <Button color="inherit"> <Link to="/data">
               <Button variant="contained" >Data</Button>
               </Link></Button> */}
               </div>
            
-              {isAuthenticated ? authlink : guestLink }  
+              {isAuthenticated ? authlink:guestLink   }  
 
 
           </Toolbar>
-        </AppBar>
+        </nav>
         </div>
        
        

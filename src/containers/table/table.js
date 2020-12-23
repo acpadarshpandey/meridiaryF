@@ -7,7 +7,7 @@ const Notes = props => (
       <td>{props.note.data}</td>
       <td>{props.note.date}</td>
       <td>
-          <Link to={"/deleteNotes/:id"+props.note._id}>Delete</Link>
+          <Link style={{color:"brown"}} to={"/deleteNotes/:id"+props.note._id}>Delete</Link>
       </td>
   </tr>
 )
@@ -38,9 +38,10 @@ export default class List extends Component {
         }
 
     render() {
-        return (
-          
-            <div style={{maxWidth:"50vw", maxHeight:"80vh","color":"brown",marginLeft:"5rem", alignContent:"center",overflow: "scroll",background:"transparent"}}>
+        return ( <div> 
+             <h3 style={{"color":"#F06E10",marginLeft:"18rem",marginTop:"2rem", alignContent:"center",}}>View Notes</h3> 
+            <div style={{ width:"20vw",maxHeight:"80vh","color":"brown",marginLeft:"14rem", alignContent:"center",background:"transparent",overflowX:"scroll",overflowX:"hidden"}}>
+                 
                  <h3>Notes List</h3>
 
                  <div className="mydiv">
@@ -60,6 +61,8 @@ export default class List extends Component {
                 </table>
             </div>
             </div>
+        </div>
+           
             
         )
     }

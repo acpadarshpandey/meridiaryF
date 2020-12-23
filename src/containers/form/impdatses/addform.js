@@ -67,25 +67,25 @@ export default class CreateNotes extends Component {
             <div style={{marginTop: 10}}>
             <form style={{"color":"brown",margin:"5px", alignContent:"center"}} onSubmit={this.onSubmit}>
                 <div className="form-group"> 
-                    <label>Notes </label>
+                    <h6> Notes </h6>
                     <input  type="text"
-                            className="form-control"
+                            className="input"
                             value={this.state.data} 
                                 onChange={this.data}
                             />
                 </div>
                 <div className="form-group">
-                    <label> Date </label>
+                <h6> Date </h6>
                     <input 
                             type="date" 
-                            className="form-control"
+                            className="input"
                            value={this.state.date} 
                                  onChange={this.date}
                             />
                 </div>
                
                 <div className="form-group">
-                    <input type="submit" value="Create Notes" className="btn btn-primary" />
+                    <input type="submit" value="Create Notes" className="btn2" />
                 </div>
             </form>
         </div>  </div>

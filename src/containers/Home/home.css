@@ -14,6 +14,11 @@
 .btn{
     border-radius: 5rem;
     margin-left: 2rem;
+    font-size: 100%;
+}
+.btn:hover{
+    outline: burlywood;
+    cursor: pointer;
 }
 .show{
     display: grid;

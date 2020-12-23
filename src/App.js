@@ -6,14 +6,18 @@ import {Provider} from 'react-redux';
 import store from './store';
 //import back from './PHOTO.jpg'
 import back from "./h.jpg"
+
  
 
 function App() {
+ 
   return (
     <div className="bg"> <Provider  store={store}> 
     <div
     className="UI Container">
       <div>
+
+     
       <img src={back} className="img" alt="logo" />
         
      

@@ -66,23 +66,23 @@ class ReactEditor extends Component {
      
         <div> 
           <div>
-          <Button variant="light" onClick={this.toggleData}> Thoughts Save</Button> 
+          <Button style={{backgroundColor:"#F06E10",marginTop:".5rem"}} onClick={this.toggleData}> Thoughts Save</Button> 
           </div>
        
           {this.state.show?<div>   <div>
         <Router>
-        <Button variant="light" onClick={this.toggleData}> <Link to= "/data"> <Button variant="light"> Go Back!!</Button> </Link> </Button>
+        <Button style={{backgroundColor:"#F06E10",marginTop:".5rem"}} onClick={this.toggleData}> <Link style={{color:"white"}} to= "/data">  Go Back!! </Link> </Button>
           <Switch>
           <Route path="/data" exact component={showResult}/>
           </Switch>
           </Router>
           </div></div> :<div>
           <div style={{maxWidth:"50vw", maxHeight:"10vh", }}>  
-          <h4 style={{color:"black"}}>Type Here!!!</h4>    
-        <ReactQuill theme="snow" style={{margin: "10px"}} value={this.state.content}
+          <h4 style={{color:"#F06E10"}}>Pour your thoughts!!!</h4>    
+        <ReactQuill  theme="snow"style={{margin: "10px",height:"90vh"}} value={this.state.content}
                      onChange={this.handleChange} />
    
-          <Button onClick={this.onSubmit}  variant="secondary" size="lg" style={{width: " 140px",border:"1px solid pink"}} >
+          <Button onClick={this.onSubmit}   size="lg" style={{marginTop:"3rem",width: " 140px",border:"1px solid pink",backgroundColor:"#F06E10"}} >
        Add
      </Button> 
      
@@ -93,7 +93,7 @@ class ReactEditor extends Component {
              <EditorList/>
              
           
-             <div>  <div style={{maxWidth:"80vw", maxHeight:"50vh" ,color:"brown",marginLeft:"10rem"}}>
+             <div>  <div style={{maxWidth:"80vw", maxHeight:"50vh" ,color:"brown",marginLeft:"9rem",marginRight:"2rem"}}>
                <div dangerouslySetInnerHTML={this.createMarkup()} className='editor'>
                  </div> </div>  </div>
              
