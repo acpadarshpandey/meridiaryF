@@ -48,26 +48,26 @@ class SignUP extends React.Component {
   render() {
     return (
       <div className="mydiv"> 
-      <div style={{ maxWidth: "50vw", maxHeight: "10vh" }}>
+        <div style={{marginTop:"6rem"}}>
         <div className="mydiv">
-          <div >
-            <Form style={{"color":"black",margin:"5px", alignContent:"center"}}>
+        <div style={{border:"2px solid white",borderRadius:"0.5rem",backgroundColor:"#F5AF40",height:"55vh",width:"25vw",fontFamily:"cursive"}}> 
+            <Form style={{"color":"brown",margin:"5px", alignContent:"center"}}>
               <Form.Group controlId="formBasicEmail">
-                <Form.Label> <h5> Name</h5> </Form.Label>
+                <Form.Label> <h6 style={{marginTop:".25rem"}}> Name</h6> </Form.Label>
                 <Form.Control type="text" onChange={this.onchange} name="name" placeholder="Enter Name" />
               </Form.Group>
               <Form.Group controlId="formBasicEmail">
-                <Form.Label><h5>Email address</h5></Form.Label>
+                <Form.Label><h6 style={{marginTop:".25rem"}}>Email address</h6></Form.Label>
                 <Form.Control type="email" onChange={this.onchange} name="email" placeholder="Enter email" />
               </Form.Group>
 
               <Form.Group controlId="formBasicPassword">
-                <Form.Label><h5>Password</h5></Form.Label>
+                <Form.Label><h6>Password</h6></Form.Label>
                 <Form.Control type="password" onChange={this.onchange} name="password" placeholder="Password" />
               </Form.Group>
               <Form.Group controlId="formBasicCheckbox">
               </Form.Group>
-              <Button  variant="contained"  onClick={this.clickhandler}>
+              <Button  variant="contained" style={{borderRadius:".5rem",backgroundColor:"#F6A83A"}}  onClick={this.clickhandler}>
                 Submit
                         </Button>
                         

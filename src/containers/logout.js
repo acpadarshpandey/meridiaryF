@@ -10,14 +10,14 @@ export class Logout extends Component{
     };
     render(){
         return(
-            <Fragment>
+    
            <Link to="#"> 
-           <button type="button" className="btn" onClick= {this.props.logout}><h6>Logout </h6></button>                                                        
+           <button type="button" className="btn" onClick= {this.props.logout}><h6 style={{color:"white"}}>Logout </h6></button>                                                        
   </Link>
       
                       
                   
-            </Fragment>
+           
 
         )
     }

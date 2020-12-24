@@ -35,20 +35,27 @@ class Home extends React.PureComponent {
          
          {/* <span> if(user) ? `Hey ${user.name}`:''</span> */}
          <Redirect to="/" />
+         <h3 style={{fontFamily:"cursive",marginRight:"25rem",color:"white",marginTop:".4rem"}} > meri diary</h3>
+             <Link to="/blog">
+            <button type="button" className="btn"><h6 style={{color:"white",}}> Blogs</h6></button>
+              </Link>
+               <Link to="/">
+              <button type="button" className="btn"><h6 style={{color:"white"}}> AboutUs</h6></button>
+              </Link>
         
-       <div style={{display:"flex",float:"right",margin:"0px 10px"}}> < Link to="/editor">
-       <button type="button" className="btn"><h6> Thoughts</h6></button>
+       <div style={{display:"flex",float:"right"}}> < Link to="/editor">
+       <button type="button" className="btn"><h6 style={{color:"white"}}> Thoughts</h6></button>
                  </Link>
                 
                  <Link to="/impd">
-                 <button type="button" className="btn"><h6>SpecialDate </h6></button>
+                 <button type="button" className="btn"><h6 style={{color:"white"}}>SpecialDate </h6></button>
                  </Link>
                  
                  <Link to="/todo">
-                 <button type="button" className="btn"><h6>DailyGoals </h6></button>
+                 <button type="button" className="btn"><h6 style={{color:"white"}}>DailyGoals </h6></button>
                  </Link></div>    
            
-                 <div style={{display:"flex",float:"right",margin:"0px 290px"}}>
+                 <div style={{display:"flex",float:"right"}}>
                  <Logout />
                  </div>
                 
@@ -57,43 +64,38 @@ class Home extends React.PureComponent {
          </Fragment>
       )
       
-    const guestLink = (   <div style={{display:"flex",float:"right",margin:"0px 680px"}}>
-      <Fragment > 
+    const guestLink = (   <div style={{display:"flex",float:"right",marginLeft:"20px"}}>
+      <h3 style={{fontFamily:"cursive",marginRight:"48rem",color:"white",marginTop:".4rem"}} > meri diary</h3>
+             <Link to="/blog">
+            <button type="button" className="btn"><h6 style={{color:"white",}}> Blogs</h6></button>
+              </Link>
+               <Link to="/">
+              <button type="button" className="btn"><h6 style={{color:"white"}}> AboutUs</h6></button>
+              </Link>
+   
         < Link to="/login">
-       <button type="button" className="btn"><h6> Login/SignUP</h6></button>
+       <button type="button" className="btn"><h6 style={{color:"white"}}> Login/SignUP</h6></button>
       </Link>
       <Redirect to="/" />
     
 
      
-    </Fragment>
+    
      </div> 
     )
     return (
       <Router>
 
         <div style={{flexGrow: 1}}>
-        <nav style={{backgroundColor:"#F0BA34"}} color="inherit"   position="static">
-          <Toolbar >
-            <Typography style={{fontFamily:"cursive"}} variant="h3" >
-            <span> meridiary</span>
-            </Typography>
-            <div  style={{display:"flex",float:"right",margin:"0px 10px"}}>
-             <Link to="/blog">
-            <button type="button" className="btn"><h6> Blogs</h6></button>
-              </Link>
-               <Link to="/">
-              <button type="button" className="btn"><h6> AboutUs</h6></button>
-              </Link>
-              {/* <Button color="inherit"> <Link to="/data">
-              <Button variant="contained" >Data</Button>
-              </Link></Button> */}
+        <nav style={{backgroundColor:"#F0BA34",height:"9vh"}} color="inherit"   position="static"> 
+          
+            <div  style={{display:"flex",float:"right"}}>
+            
+              {isAuthenticated ? authlink :guestLink  }  
+
               </div>
-           
-              {isAuthenticated ? authlink:guestLink   }  
-
-
-          </Toolbar>
+          
+         
         </nav>
         </div>
        

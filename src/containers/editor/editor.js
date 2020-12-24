@@ -66,7 +66,7 @@ class ReactEditor extends Component {
      
         <div> 
           <div>
-          <Button style={{backgroundColor:"#F06E10",marginTop:".5rem"}} onClick={this.toggleData}> Thoughts Save</Button> 
+          <Button style={{backgroundColor:"#F06E10",marginTop:".5rem"}} onClick={this.toggleData}> Saved Thoughts</Button> 
           </div>
        
           {this.state.show?<div>   <div>

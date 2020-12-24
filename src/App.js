@@ -18,7 +18,7 @@ function App() {
       <div>
 
      
-      <img src={back} className="img" alt="logo" />
+      <img src={back} className="img1" alt="logo" />
         
      
      <FirstP/>

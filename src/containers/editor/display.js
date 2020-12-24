@@ -37,18 +37,7 @@ export default class EditorList extends Component {
                 
                 <h3 style={{color:"#F06E10",marginLeft:"12rem"}}>My Thoughts</h3>
        
-        
-                {/* <div className="mydiv">
-               
-                 <Card style={{ width: '18rem' }}>
-                 <Card.Body>
-        <Card.Title>{this.state.Lists}</Card.Title>
-             <Card.Subtitle className="mb-2 text-muted"></Card.Subtitle>
-                     {data.content}
     
-                      </Card.Body>
-                      </Card>
-                   </div> */}
             </div>
 
         )

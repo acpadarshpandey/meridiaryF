@@ -42,26 +42,25 @@ class LoginPage extends React.Component {
   render() {
     return (
       <div className="mydiv"> 
-       <div style={{ maxWidth: "50vw", maxHeight: "10vh" }}>
+       <div style={{marginTop:"6rem"}}>
         <div className="mydiv">
-
-          <Form style={{"color":"black",margin:"5px", alignContent:"center"}}>
+        <div style={{border:"2px solid white",borderRadius:"0.5rem",backgroundColor:"#F5AF40",height:"55vh",width:"25vw",fontFamily:"cursive"}}> 
+        <Form style={{"color":"brown",margin:"5px", alignContent:"center"}}>
             <Form.Group controlId="formBasicEmail">
-              <Form.Label  ><h5>Email address</h5></Form.Label>
+              <Form.Label  ><h6 style={{marginTop:".25rem"}}>Email address</h6></Form.Label>
               <Form.Control onChange={this.onchange} name="email" type="email" placeholder="Enter email" />
             </Form.Group>
 
             <Form.Group controlId="formBasicPassword">
-              <Form.Label><h5>Password</h5></Form.Label>
+              <Form.Label><h6>Password</h6></Form.Label>
               <Form.Control onChange={this.onchange} name="password" type="password" placeholder="Password" />
             </Form.Group>
-            <Form.Group controlId="formBasicCheckbox">
-            </Form.Group>
-            <Button variant="contained"  onClick={this.clickHandler}>
+           
+            <Button variant="contained" style={{borderRadius:".5rem",backgroundColor:"#F6A83A"}}  onClick={this.clickHandler}>
               Submit
                         </Button>
                         <div className="su"> 
-                        <h6>If not Register Please SignUP</h6>
+                       <p> If not Register Please SignUP</p>
                <Link to="/signup">SignUP</Link>
                         </div>
                
@@ -69,6 +68,8 @@ class LoginPage extends React.Component {
                         <Link to="/SignUP"> IF NOT USER THEN SIGNUP</Link>
                                </Form.Text> */}
           </Form>
+        </div>
+          
 
         </div>
 
