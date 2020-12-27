@@ -7,7 +7,7 @@ import EditorList from './display'
 import '..//Notesapp/ntp.css';
 import '../form/impdatses/date.css'
 import showResult from "./showResult";
-import { BrowserRouter as Router,Redirect, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
   import {Link} from 'react-router-dom'
 
 class ReactEditor extends Component {

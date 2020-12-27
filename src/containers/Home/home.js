@@ -4,7 +4,6 @@ import { BrowserRouter as Router,Redirect, Route, Switch } from 'react-router-do
 import Blog from '../blog'
 import Editor from '../editor/editor';
 import '../Home/home.css'
-import { Toolbar, Typography, Button, } from '@material-ui/core';
 import ImpDates from '../Notesapp/importantdate'
 import Logout from '../logout'
 import login from '../login'

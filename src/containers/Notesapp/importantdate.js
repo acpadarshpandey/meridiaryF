@@ -6,7 +6,9 @@ import '../form/impdatses/date.css'
 
 
 class Apps extends React.Component {
-
+	 state={
+		 shoe:false
+	 }
 	render(){return ( <div>
 		<div className="div">
 			<div className="container">
@@ -24,7 +26,8 @@ class Apps extends React.Component {
 		   </div> 
 		   <div className="show">
 		   <div > 
-		<DataTable />
+			   <button className="btn4"onClick={()=>this.setState({shoe:!this.state.shoe})}> {!this.state.shoe? "show data": "Refresh"}</button>
+		{!this.state.shoe?null:<DataTable />}
 	</div> 
 </div>
 </div>

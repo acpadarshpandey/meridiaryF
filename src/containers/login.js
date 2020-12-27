@@ -1,10 +1,7 @@
 import React from 'react';
-//import axios from 'axios';
  import { Link } from 'react-router-dom';
 import { Button, } from '@material-ui/core';
 import { Form, } from 'react-bootstrap'
-import { BrowserRouter as Router} from 'react-router-dom';
-//import HomePage from './Home/home';
 import '../component/first.css';
 import '../containers/login.css';
 import { connect } from 'react-redux'

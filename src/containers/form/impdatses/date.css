@@ -32,3 +32,23 @@
   outline-style: none;
 
 }
+.btn3{
+    border-radius: 5rem;
+    margin-top: 0.5rem;
+    font-size: 100%;
+    background-color:  #A87E1A;
+    outline: none;
+    color: white;
+}
+.btn3:hover{
+    cursor: pointer;
+}
+.btn4{
+    width: 20vw;
+    height: 5vh;
+    margin-top: 2rem;
+    margin-left: 8rem;
+    background-color:  #A87E1A;
+    border-radius: 2rem;
+    outline: none;
+}
