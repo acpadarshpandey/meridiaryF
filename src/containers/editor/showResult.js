@@ -7,7 +7,16 @@ const Notes = props => (
         <td>{reactp(props.note.content)}</td>
         {/* <td>{props.note.date}</td> */}
         <td>
-            <Link style={{color:"brown"}} to={"/deleteNotes/:id" + props.note._id}>Delete</Link>
+        <button className="btn3"onClick={()=>{
+              const id=props.note._id;
+              axios.delete(`https://meridiaryb.herokuapp.com/editor/deleteContent/${id}`) .then(() => 
+              {console.log("done")
+            
+               })
+              
+
+          }} >Delete</button>
+            {/* <Link style={{color:"brown"}} to={"/deleteNotes/:id" + props.note._id}>Delete</Link> */}
         </td>
     </tr>
 )
