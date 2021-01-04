@@ -1,12 +1,14 @@
 import React, { Component, } from 'react';
 import axios from 'axios';
+import {Link} from "react-router-dom"
 import '../form/impdatses/date.css'
 const Notes = props => (
   <tr>
       <td>{props.note.data}</td>
       <td>{props.note.date}</td>
       <td>
-          <button className="btn3"onClick={()=>{
+        <Link to="/notesdel">
+        <button className="btn3"onClick={()=>{
               const id=props.note._id;
               axios.delete(`https://meridiaryb.herokuapp.com/impdates/deleteNotes/${id}`) .then(() => 
               {console.log("done")
@@ -14,7 +16,7 @@ const Notes = props => (
                })
               
 
-          }} >Delete</button>
+          }} >Delete</button> </Link>  
           {/* <Link style={{color:"brown"}} to={"http://localhost:8080/impdates/deleteNotes/"+props.note._id}>Delete</Link> */}
       </td>
   </tr>

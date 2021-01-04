@@ -12,8 +12,9 @@ import { connect } from 'react-redux';
 import PropsTypes from 'prop-types'
 import AboutUS from '../../containers/about'
 import Todo from "../../component/Todo/todo"
+import DeleteN from "../../component/delete/deleten"
+import DeleteE from "../../component/delete/deletee"
 
-// import showResult from '../../containers/editor/showResult'
 
 
 class Home extends React.PureComponent {
@@ -34,7 +35,7 @@ class Home extends React.PureComponent {
          
          {/* <span> if(user) ? `Hey ${user.name}`:''</span> */}
          <Redirect to="/" />
-         <h3 style={{fontFamily:"cursive",marginRight:"25rem",color:"white",marginTop:".4rem"}} > meri diary</h3>
+         <h3 style={{fontFamily:"cursive",marginRight:"30rem",color:"white",marginTop:".4rem",display:"flex",float:"left"}} > meri diary</h3>
              <Link to="/blog">
             <button type="button" className="btn"><h6 style={{color:"white",}}> Blogs</h6></button>
               </Link>
@@ -50,9 +51,7 @@ class Home extends React.PureComponent {
                  <button type="button" className="btn"><h6 style={{color:"white"}}>SpecialDate </h6></button>
                  </Link>
                  
-                 <Link to="/todo">
-                 <button type="button" className="btn"><h6 style={{color:"white"}}>DailyGoals </h6></button>
-                 </Link></div>    
+                </div>    
            
                  <div style={{display:"flex",float:"right"}}>
                  <Logout />
@@ -64,7 +63,7 @@ class Home extends React.PureComponent {
       )
       
     const guestLink = (   <div style={{display:"flex",float:"right",marginLeft:"20px"}}>
-      <h3 style={{fontFamily:"cursive",marginRight:"48rem",color:"white",marginTop:".4rem"}} > meri diary</h3>
+      <h3 style={{fontFamily:"cursive",marginRight:"48rem",color:"white",marginTop:".4rem",display:"flex",float:"left"}} > meri diary</h3>
              <Link to="/blog">
             <button type="button" className="btn"><h6 style={{color:"white",}}> Blogs</h6></button>
               </Link>
@@ -108,7 +107,9 @@ class Home extends React.PureComponent {
           <Route path="/impd" exact component={ImpDates} />
           <Route path="/signup" exact component={SignUP} />
           <Route path="/todo" exact component={Todo}/>
-          {/* <Route path="/data" exact component={showResult}/> */}
+          <Route path="/notesdel" exact component={DeleteN}/>
+          <Route path="/tdel" exact component={DeleteE}/>
+        
 
 
         </Switch>
