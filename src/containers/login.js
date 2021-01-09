@@ -24,13 +24,18 @@ class LoginPage extends React.Component {
       [e.target.name]: e.target.value
     })
   };
+ 
   clickHandler = e => {
     e.preventDefault();
     const { email, password } = this.state;
+    if(!email||!password){
+      alert("Pls enter all fields")
+    }
     const user = {
       email, password
     };
     this.props.login(user);
+    
   }
 
 

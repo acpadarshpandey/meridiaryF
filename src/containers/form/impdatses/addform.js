@@ -40,12 +40,16 @@ export default class CreateNotes extends Component {
         // console.log(`Data: ${this.state.data}`);
         // console.log(`date: ${this.state.date}`);
     
+        if(!this.state.data||!this.state.date){
+            alert("Enter all field")
+          }
 
     const payload = {
        data: this.state.data,
          date: this.state.date,
-    
+        
     };
+    
 
     axios.post('https://meridiaryb.herokuapp.com/impdates/addnotes', payload)
         .then(res => { 

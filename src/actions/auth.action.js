@@ -2,6 +2,29 @@ import axios from 'axios';
 import{returnError} from './error.action'
 import {USER_LOAD, USER_LOADING, AUTH_ERROR, LOGIN_SUCCESS, LOGIN_FAIL, REGISTER_SUCCESS, LOGOUT_SUCCESS, REGISTER_FAIL} from './types'
 
+
+//check  token and load user
+
+export const loadUser=()=>(dispatch,getState)=>{
+    //usere loaading
+    dispatch({type:USER_LOADING})
+    
+    axios.get('https://meridiaryb.herokuapp.com/api/getuser',tokenConfig(getState))
+    .then(res=> dispatch({
+        type: USER_LOAD,
+        payload:res.data
+    })
+    )
+    .catch(err=>{
+        dispatch(returnError(err.response.data,err.response.status))
+        dispatch({
+            type:AUTH_ERROR
+        })
+    })
+}
+
+
+
 //register
 
 export const register= ({name, email, password})=> dispatch =>{
@@ -20,9 +43,11 @@ export const register= ({name, email, password})=> dispatch =>{
            type:REGISTER_SUCCESS,
            payload:res.data
        }))
-       .catch(err=> dispatch({
+       .catch(err=> {
+        dispatch(returnError(err.response.data,err.response.status))
+        dispatch({
            type:REGISTER_FAIL,
-       }))
+       })})
 }
 // LOGOUT_SU
 export const logout=()=>{

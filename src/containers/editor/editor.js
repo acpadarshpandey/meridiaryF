@@ -39,10 +39,12 @@ class ReactEditor extends Component {
       }
       onSubmit(e){
         e.preventDefault();
-        
-        console.log(`Form submitted:`);
-        console.log(`content: ${this.state.content}`);
+      
        
+        if(!this.state.content){
+          alert("Enter  fields")
+        }
+
   
       const payload = {
          content: this.state.content,

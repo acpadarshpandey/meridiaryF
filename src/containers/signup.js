@@ -11,18 +11,25 @@ class SignUP extends React.Component {
     name: '',
     email: '',
     password: '',
-
+    msg:null,
   };
   static propTypes = {
     isAuthenticated: PropTypes.bool,
     register: PropTypes.func.isRequired,
+    error:PropTypes.object.isRequired
   }
 
-  //  componentDidUpdate(prevprops){
+   componentDidUpdate(prevprops){
+   const{error}= this.props;
+     if(error!==prevprops.error){
+       if(error.id==="REGISTER_FAIL"){
 
+        this.setState({msg:error.msg.msg})
+       }
+       else this.setState({msg:null})
+   }
 
-
-  //  }
+    }
 
 
   onchange = (e) => {
@@ -35,12 +42,15 @@ class SignUP extends React.Component {
     e.preventDefault();
     const { name, email, password } = this.state;
     
+    if(!name||!email||!password){
+      alert("Enter all field")
+    }
     
     const newuser = {
       name, email, password
     };
     this.props.register(newuser);
-    this.props.history.push("/login");
+    // this.props.history.push("/login");
     
   }
 
@@ -52,6 +62,7 @@ class SignUP extends React.Component {
         <div className="mydiv">
         <div style={{border:"2px solid white",borderRadius:"0.5rem",backgroundColor:"#F5AF40",height:"55vh",width:"25vw",fontFamily:"cursive"}}> 
             <Form style={{"color":"brown",margin:"5px", alignContent:"center"}}>
+              {this.state.msg?alert(this.state.msg):null}
               <Form.Group controlId="formBasicEmail">
                 <Form.Label> <h6 style={{marginTop:".25rem"}}> Name</h6> </Form.Label>
                 <Form.Control type="text" onChange={this.onchange} name="name" placeholder="Enter Name" />
@@ -82,7 +93,8 @@ class SignUP extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  isAuthenticated: state.auth.isAuthenticated
+  isAuthenticated: state.auth.isAuthenticated,
+  error:state.error
 })
 
 export default connect(

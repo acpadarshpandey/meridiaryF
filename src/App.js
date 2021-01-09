@@ -4,13 +4,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import FirstP from './component/firstP';
 import {Provider} from 'react-redux';
 import store from './store';
-//import back from './PHOTO.jpg'
+import{loadUser} from "./actions/auth.action"
 import back from "./h.jpg"
+import { Component } from 'react';
 
  
 
-function App() {
- 
+class App extends Component{
+  componentDidMount(){
+    store.dispatch(loadUser())
+  }
+   render(){ 
   return (
     <div className="bg"> <Provider  store={store}> 
     <div
@@ -28,6 +32,8 @@ function App() {
         </Provider></div>
     
   );
+ }
+  
 }
 
 export default App;
