@@ -11,9 +11,9 @@ import { Component } from 'react';
  
 
 class App extends Component{
-  componentDidMount(){
-    store.dispatch(loadUser())
-  }
+  // componentDidMount(){
+  //   store.dispatch(loadUser())
+  // }
    render(){ 
   return (
     <div className="bg"> <Provider  store={store}> 

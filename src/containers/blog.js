@@ -42,9 +42,9 @@ class Blog extends React.Component{
                     abc={<p style={{fontFamily:"cursive",color:"white"}}>Education is an admirable thing, but it is well to remember from time to time that nothing that is worth knowing can be taught.</p>}/>
                     </div>  
                      <div style={{margin:"5px"}}><MediaCard abg={f}
-                     abc={<p style={{fontFamily:"cursive",color:"white"}}>Give a man a fish and you feed him for a day; teach a man to fish and you feed him for a lifetime.</p>} /></div>  
+                     abc={<p style={{fontFamily:"cursive",color:"white"}}>Watch your thoughts; they become words. Watch your words; they become actions. Watch your actions; they become habits. </p>} /></div>  
                      <div style={{margin:"5px"}}><MediaCard abg={d} 
-                     abc={<p style={{fontFamily:"cursive",color:"white"}}>Give a man a fish and you feed him for a day; teach a man to fish and you feed him for a lifetime.</p>}/></div> 
+                     abc={<p style={{fontFamily:"cursive",color:"white"}}>You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose.</p>}/></div> 
                     
                        <br/>
                        

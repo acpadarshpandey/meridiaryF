@@ -35,7 +35,7 @@ class Home extends React.PureComponent {
          
          {/* <span> if(user) ? `Hey ${user.name}`:''</span> */}
          <Redirect to="/" />
-         <h3 style={{fontFamily:"cursive",marginRight:"30rem",color:"white",marginTop:".4rem",display:"flex",float:"left"}} > meri diary</h3>
+         <h3 style={{fontFamily:"cursive",marginRight:"33rem",color:"white",marginTop:".4rem",display:"flex",float:"left"}} > meri diary</h3>
              <Link to="/blog">
             <button type="button" className="btn"><h6 style={{color:"white",}}> Blogs</h6></button>
               </Link>

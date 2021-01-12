@@ -17,8 +17,9 @@ const useStyles = makeStyles({
   },
   media: {
     height:"20vh",
+   
   },
-});
+})
 
 export default function MediaCard(props) {
   const classes = useStyles();
